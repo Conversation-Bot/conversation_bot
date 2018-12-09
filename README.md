@@ -19,4 +19,4 @@ To submit issues:
 This is less of a program and more of just raw code. You must input the code (in the conversation-bot.txt file) into an HTML editor. I will put a .html file in as well. I'm considering making .exe and .app files, but that's for later I guess. 
 
 # contact
-Contact me at irishempire77@gmail.com. If you want to use your code in your website, instead contact my "business" email bottomtext97@gmail.com (Don't mind the names of these emails, I made them when I was like 8 so yeah.)
+Contact me at irishempire77@gmail.com. If you want to use my code in your website, instead contact my "business" email bottomtext97@gmail.com (Don't mind the names of these emails, I made them when I was like 8 so yeah.)
