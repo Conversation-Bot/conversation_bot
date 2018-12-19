@@ -8,10 +8,12 @@ assignees: ''
 ---
 
 **Details**
+
 Explain in as much detail as possible what’s wrong. Since this is HTML/JS, it requires quite a lot of explanation.
 
 
 **How to reproduce**
+
 1. Explain what
 2. steps you
 3. need to
@@ -21,11 +23,13 @@ Explain in as much detail as possible what’s wrong. Since this is HTML/JS, it 
 
 
 **Expected behavior**
+
 Explain what (you think) should happen
 (If it’s intended, I’ll tell you, if you think it’s dumb, then I’ll change it most of the time.)
 
 
 **Actual behavior**
+
 What happens? Again, explain in detail.
 
 
