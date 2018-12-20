@@ -22,6 +22,7 @@ Explain in as much detail as possible what’s wrong. Since this is HTML/JS, it 
 6. issue happen
 
 
+
 **Expected behavior**
 
 Explain what (you think) should happen
