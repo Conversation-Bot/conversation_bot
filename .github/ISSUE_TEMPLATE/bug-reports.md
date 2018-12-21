@@ -34,6 +34,10 @@ Explain what (you think) should happen
 What happens? Again, explain in detail.
 
 
+**Locate the issue**
+Where do you think the issue happened? Quote the line of code if necessary.
+
+
 **Notes**
 
 Any extra information goes here, e.g. if you aren’t an expert in HTML/JS, say “Please be gentle, I’m not an expert.”
