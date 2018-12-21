@@ -41,14 +41,14 @@
   <li style=font-family:comic-sans-ms;>How is the weather today? or How's the weather today?</li>
   <li style=font-family:comic-sans-ms;>How are you today? or How is your day going?</li>
   <li style=font-family:comic-sans-ms;>Tell me about you</li>
-   <li style=font-family:comic-sans-ms;>What are you doing? or Whatcha doing?</li>
-    <li style=font-family:comic-sans-ms;> Who made you? or Who were you made by?</li>
-     <li style=font-family:comic-sans-ms;>oof or you can capitalize the first O</li>
- <li style=font-family:comic-sans-ms;>yeet</li>
+  <li style=font-family:comic-sans-ms;>What are you doing? or Whatcha doing?</li>
+  <li style=font-family:comic-sans-ms;> Who made you? or Who were you made by?</li>
+  <li style=font-family:comic-sans-ms;>oof or you can capitalize the first O</li>
+  <li style=font-family:comic-sans-ms;>yeet</li>
   <li style=font-family:comic-sans-ms;>What is your favorite ideology?</li>
-   <li style=font-family:comic-sans-ms;>What is the time?</li>
-    <li style=font-family:comic-sans-ms;>hecc or you can capitalize the H</li>
-    <li style =font-family:comic-sans-ms;>bye, bye!, or you can capitalize the B</li>
+  <li style=font-family:comic-sans-ms;>What is the time?</li>
+  <li style=font-family:comic-sans-ms;>hecc or you can capitalize the H</li>
+  <li style =font-family:comic-sans-ms;>bye, bye!, or you can capitalize the B</li>
 </ol>
 <p style=font-family:comic-sans-ms;>Please know that this is case sensitive. You will need to type in the exact case as the list above.</p>
 
@@ -79,7 +79,7 @@
 
 <script>
 function myFunction() {
- alert("Hi, i am Conversation Bot!");
+alert("Hi, i am Conversation Bot!");
 var name = prompt("First, tell me your name!")
 var times = 99;
 for(var i=0; i < times; i++){
