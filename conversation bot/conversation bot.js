@@ -1,4 +1,4 @@
- alert("Hi, i am Conversation Bot!");
+alert("Hi, i am Conversation Bot!");
 var name = prompt("First, tell me your name!")
 var times = 99;
 for(var i=0; i < times; i++){
