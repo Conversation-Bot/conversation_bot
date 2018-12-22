@@ -18,4 +18,5 @@ Why do you want this to be added?
 **Technical details**
 
 OS: (Check the bug report file for details on what to put here)
+
 Editor: (^)
