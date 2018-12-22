@@ -6,13 +6,13 @@ I am making this project as a personal challenge. I have been learning Javascrip
 
 # Issue form
 To submit issues:
-1. Explain the problem in detail
-2. Explain how to recreate it (Include all optional steps too)
-3. Explain what should happen
-4. Explain what actually happens
-5. Tell me what you think I can do to fix it
-6. Locate where you think the problem is
-7. Any extra notes
+1. Explain the problem in detail.
+2. Explain how to recreate it (include all optional steps too.)
+3. Explain what should happen.
+4. Explain what actually happens.
+5. Tell me what you think I can do to fix it.
+6. Locate where you think the problem is.
+7. Any extra notes.
 8. Technical details (e.g what program or website you are using to run the code, OS, etc.)
 
 # How to Run
