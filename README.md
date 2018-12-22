@@ -16,4 +16,4 @@ To submit issues:
 8. Technical details (e.g what program or website you are using to run the code, OS, etc.)
 
 # How to Run
-I have HTML, JS, and CSS files. I will also have a .txt (.rtf for some) file if your computer is bad and can't run html files lol. Either way PLEASE USE THE HTML FILE IT IS WAY BETTER.
+I have HTML, JS, and CSS files. I will also have a .txt file if your computer is bad and can't run html files lol. Either way PLEASE USE THE HTML FILE IT IS WAY BETTER.
