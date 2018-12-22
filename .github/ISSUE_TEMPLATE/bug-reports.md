@@ -35,6 +35,7 @@ What happens? Again, explain in detail.
 
 
 **Locate the issue**
+
 Where do you think the issue happened? Quote the line of code if necessary.
 
 
