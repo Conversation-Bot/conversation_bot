@@ -47,4 +47,5 @@ Any extra information goes here, e.g. if you aren’t an expert in HTML/JS, say 
 **Technical details**
 
 OS:  (If you don’t know the *exact* version, just say, for example, macOS High Sierra latest version or macOS latest version. For Windows, put what build you are using, e.g. Windows 10 Professional, and for some older versions of Windows, put your service pack.)
+
 Editor: (Put what HTML or JS editor you are using.)
