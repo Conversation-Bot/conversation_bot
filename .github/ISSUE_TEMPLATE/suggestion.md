@@ -3,7 +3,7 @@ name: Suggestion
 about: 'Suggest an idea'
 title: Suggestion
 labels: 'enhancement'
-assignees: ''
+assignees: 'irishmapping'
 
 ---
 
