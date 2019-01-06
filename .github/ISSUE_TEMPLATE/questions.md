@@ -3,7 +3,7 @@ name: Questions
 about: Ask a question
 title: Question
 labels: 'misc.'
-assignees: ''
+assignees: 'irishmapping'
 
 ---
 
