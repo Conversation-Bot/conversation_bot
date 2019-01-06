@@ -1,6 +1,6 @@
 ---
 name: Suggestion
-about: 'Suggest an idea '
+about: 'Suggest an idea'
 title: Suggestion
 labels: ''
 assignees: ''
