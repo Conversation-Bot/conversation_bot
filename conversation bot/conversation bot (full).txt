@@ -1,0 +1,2011 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+    <style>
+	               body {
+	   margin: 0;
+	   font-family: comic-sans-ms;
+	}
+	background {
+		background-color: white;
+}
+	.tab {
+
+	   overflow: hidden;
+	   border: none;
+	}
+	.tab button {
+	   float: left;
+	   border: none; 
+	   outline: none;
+	   cursor: alias;
+	   padding: 14px 16px;
+	   transition: 0.3s;
+	   font-size: 17px;
+	}
+	.tab button:hover {
+	   background-color: #008000;
+	}
+	.tab button.active {
+	   background-color: #00FFFF;
+	}
+	.tabcontent {
+	   display: none;
+	   padding: 6px 12px;
+	   border: 1px solid #ccc;
+	   border-top: none;
+	}
+	.tabcontent {
+	   animation: fadeEffect 1s;
+	}
+	@keyframes fadeEffect {
+	   from {
+	       opacity: 0;
+	   }
+	   to {
+	       opacity: 1;
+	   }
+	}
+	input[type=text], select, textarea {
+	   width: 100%;
+	   padding: 12px;
+	   border: 1px solid #ccc;
+	   border-radius: 4px;
+	   box-sizing: border-box;
+	   margin-top: 6px;
+	   margin-bottom: 16px;
+	   resize: vertical;
+	}
+	input[type=submit] {
+	   background-color: #4CAF50;
+	   color: white;
+	   padding: 12px 20px;
+	   border: none;
+	   border-radius: 4px;
+	   cursor: pointer;
+	}
+	input[type=submit]:hover {
+	   background-color: #45a049;
+	}
+
+	</style>
+
+	<title>
+	</title>
+</head>
+
+<body>
+	<img alt="The victoryRoyale" height="270" hidden="" id="victoryRoyale" src="data:image/jpeg;base64,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" width="750">
+
+	<div class="tab">
+		<button class="tablinks" onclick="tabOpen(event, 'Main')">Main</button> <button class="tablinks" onclick="tabOpen(event, 'About')">About</button><br>
+
+		<div class="tabcontent" id="About">
+<br>
+			<h3>About</h3>
+<script>
+			                   function tabOpen(tab, tabName) {
+			                             var i, tabcontent, tablinks;
+			                             tabcontent = document.getElementsByClassName("tabcontent");
+			                             for (i = 0; i < tabcontent.length; i++) {
+			                                     tabcontent[i].style.display = "none";
+			                             }
+			                             tablinks = document.getElementsByClassName("tablinks");
+			                             for (i = 0; i < tablinks.length; i++) {
+			                                     tablinks[i].className = tablinks[i].className.replace(" active", "");
+			                             }
+			                             document.getElementById(tabName).style.display = "block";
+			                             tab.currentTarget.className += " active";
+			                     }
+</script>
+
+			<p>Conversation Bot is a simple bot designed to be a nice pseudo-conversation. It took quite a while to develop, and I am combining my HTML, JS, and CSS skills into one. This is my "biggest" JS project, meant to challenge myself to above above and beyond. The final plan is to make the code at least 7 MB in size. Thank you for using this!</p>
+
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">Contact me at: <a href="mailto:irishempire77@gmail.com">irishempire77@gmail.com</a></p>
+<p>Or, you can go to the <a href="https://github.com/Conversation-Bot/conversation_bot/tree/dev">Github repository</a>.</p>
+		</div>
+
+		<div class="tabcontent" id="Main">
+<br>
+			<p><button class="w3-button w3-blue" onclick="startGame()">Click to start the game!</button> <button class="w3-button w3-orange" onclick="location.reload(true);">Reset</button></p><br>
+<br>
+			<p id="mode"></p>
+			<p style="font-family:comic-sans-ms;font-size:110%;">Hey, why not play a game before trying this out?</p>
+
+			<script>
+			                     document.body.onkeydown = function(e) {
+			                             if (e.keyCode == 38) {
+			                                     accelerate(-0.025);
+			                                     accelerate2(-0.025);
+			                             }
+			                     };
+			                     document.body.onkeyup = function(d) {
+			                             if (d.keyCode == 38) {
+			                                     accelerate(0.025);
+			                                     accelerate2(0.025);
+			                             }
+			                     };
+
+
+			</script>
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">Press the up arrow key to go up.</p>
+
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">How long can you stay alive?</p>
+			<span style="font-family:comic-sans-ms;color:red;font-size:210%"><b>C</b></span><span style="font-family:comic-sans-ms;color:orange;font-size:210%;"><b>o</b></span><span style="font-family:comic-sans-ms;color:yellow;font-size:210%;"><b>n</b></span><span style="font-family:comic-sans-ms;color:green;font-size:210%;"><b>v</b></span><span style="font-family:comic-sans-ms;color:blue;font-size:210%;"><b>e</b></span><span style="font-family:comic-sans-ms;color:purple;font-size:210%;"><b>r</b></span><span style="font-family:comic-sans-ms;color:red;font-size:210%;"><b>s</b></span><span style="font-family:comic-sans-ms;color:orange;font-size:210%;"><b>a</b></span><span style="font-family:comic-sans-ms;color:yellow;font-size:210%;"><b>t</b></span><span style="font-family:comic-sans-ms;color:green;font-size:210%;"><b>i</b></span><span style="font-family:comic-sans-ms;color:blue;font-size:210%;"><b>o</b></span><span style="font-family:comic-sans-ms;color:purple;font-size:210%;"><b>n</b></span> &nbsp;<span style="font-family:comic-sans-ms;color:red;font-size:210%;"><b>B</b></span><span style="font-family:comic-sans-ms;color:yellow;font-size:210%;"><b>o</b></span><span style="font-family:comic-sans-ms;color:blue;font-size:210%;"><b>t</b></span>
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">This is a simple conversation bot still in development.</p>
+
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">Things to say to it:</p>
+
+
+			<ol type="1">
+				<li style="font-family:comic-sans-ms;font-size:110%;">hello or hi or you can capitalize the H</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">How is the weather today? or How's the weather today?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">How are you today? or How is your day going?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">Tell me about you</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">What are you doing? or Whatcha doing?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">Who made you? or Who were you made by?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">oof or you can capitalize the first O</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">yeet</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">What is your favorite ideology?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">What is the time?</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">hecc or you can capitalize the H</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">Tell me a joke</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">bye, bye!, or you can capitalize the B</li>
+
+
+				<li style="font-family:comic-sans-ms;font-size:110%;">Calculator</li>
+			</ol>
+
+
+			<p style="font-family:comic-sans-ms;font-size:110%;">Please know that this is case sensitive. You will need to type in the exact case as the list above.</p>
+
+
+			<div class="w3-container">
+				<button class="w3-button w3-green" onclick="myFunction()">Click to start!</button>
+			</div>
+			<script>
+			                   function myFunction() {
+			                             alert("Hi, I am Conversation Bot!");
+			                             var name = prompt("First, tell me your name!");
+			                             var i;
+			                             outerloop: for (i = 0; i < 100; i++) {
+			                                     var ans = prompt("Ask me/tell me something, " + name + "!");
+			                                     if (ans == "Hello" || ans == "Hi" || ans == "hello" || ans == "hi") {
+			                                             alert("Hello " + name + "!");
+			                                     }
+			                                     if (ans == "How is the weather today?" || ans == "How's the weather today?") {
+			                                             alert("Not too bad over here in BotLand. It's almost always sunny, I don't know how earth is, haha!");
+			                                     }
+			                                     if (ans == "How are you today?" || ans == "How is your day going?") {
+			                                             alert("I'm doing fine " + name + "! I hope you are doing okay as well!");
+			                                     }
+			                                     if (ans == "Tell me about you") {
+			                                             alert("Well... My name is Conversation Bot, part of the Bot family, son of Talk Bot. I live on BotLand, on the planet Robo-Earth. I really like to talk. A lot.");
+			                                     }
+			                                     if (ans == "What are you doing?" || ans == "Whatcha doing?") {
+			                                             alert("Talking to " + name + ", you! All I do is talk. I love talking so much!");
+			                                     }
+			                                     if (ans == "Who made you?" || ans == "Who were you made by?") {
+			                                             alert("A person with a brain (possibly but probably not xd) and feet who will yeet you past the Andromeda Galaxy if you try to find him");
+			                                     }
+			                                     if (ans == "oof" || ans == "Oof") {
+			                                             alert("oof ooof oooof OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF");
+			                                     }
+			                                     if (ans == "yeet") {
+			                                             alert("YEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEETTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS SOVIETUS");
+			                                     }
+			                                     if (ans == "What is your favorite ideology?") {
+			                                             alert("COMMUNISM");
+			                                     }
+			                                     if (ans == "hecc" || ans == "Hecc") {
+			                                             alert("N O  S W E A R I N G  O N  T H I S  C H R I S T I A N  M I N E C R A F T  S E R V E R");
+			                                     }
+			                                     if (ans == "Tell me a joke") {
+			                                             var rng = Math.floor((Math.random() * 5) + 1);
+			                                             if (rng == 1) {
+			                                                     alert("Why did the chicken cross the road? To CHICK out the house across the road.");
+			                                             }
+			                                             if (rng == 2) {
+			                                                     alert("Why was all of the Senate replaced with horses? So they could say 'Nay'");
+			                                             }
+			                                             if (rng == 3) {
+			                                                     alert("How did Trump win the elections in 2016? He played his trump card.");
+			                                             }
+			                                             if (rng == 4) {
+			                                                     alert("What is Tom Cruise's luxury vacation? a cruise with the name Tom.");
+			                                             }
+			                                             if (rng == 5) {
+			                                                     alert("In the year 2050, aliens invade Earth. What did Jake say to Ian? 'Give them some ale, Ian.'");
+			                                             }
+			                                     }
+			                                     if (ans == "bye" || ans == "Bye" || ans == "Bye!" || ans == "Bye!") {
+			                                             alert("Bye " + name + "! It was a pleasure talking to you!");
+			                                     }
+			                                     if (ans == "bye" || ans == "Bye" || ans == "Bye!" || ans == "bye!") break outerloop;
+			                                     if (ans === "" || ans === null) {
+			                                             alert("Ah, are you bored? That's okay, we can talk later!");
+			                                     }
+			                                     if (ans === "" || ans === null) break outerloop;
+			                                     if (ans == "What is the time?") {
+			                                             var time = new Date(); // required, acts as a constant
+			                                             var yr = time.getFullYear(); // get the year, e.g 2054
+			                                             var mon = time.getMonth(); // gets the month, e.g september
+			                                             if (mon === 0); { // the month is generated as a number, the code below here converts those numbers to text.
+			                                                     mon = "January"; // 1 is january
+			                                             }
+			                                             if (mon == 1) {
+			                                                     mon = "February"; // 2 is february, etc.
+			                                             }
+			                                             if (mon == 2) {
+			                                                     mon = "March";
+			                                             }
+			                                             if (mon == 3) {
+			                                                     mon = "April";
+			                                             }
+			                                             if (mon == 4) {
+			                                                     mon = "May";
+			                                             }
+			                                             if (mon == 5) {
+			                                                     mon = "June";
+			                                             }
+			                                             if (mon == 6) {
+			                                                     mon = "July";
+			                                             }
+			                                             if (mon == 7) {
+			                                                     mon = "August";
+			                                             }
+			                                             if (mon == 8) {
+			                                                     mon = "September";
+			                                             }
+			                                             if (mon == 9) {
+			                                                     mon = "October";
+			                                             }
+			                                             if (mon == 10) {
+			                                                     mon = "November";
+			                                             }
+			                                             if (mon == 11) {
+			                                                     mon = "December"; // december is 11
+			                                             }
+			                                             var day = time.getDate(); // gets the day, e.g 27
+			                                             var hr = time.getHours(); // gets the current hour, e.g 9, it is in 24 hour time and formatting it to 12 hour time has bad side effects, like making anything â‰¥ 10 be 0
+			                                             var min = time.getMinutes(); // gets the current minutes, e.g. 12
+			                                             var sec = time.getSeconds(); // gets current seconds, e.g. 34
+			                                             var mil = time.getMilliseconds(); // gets current milliseconds, e.g. 876
+			                                             var week = time.getDay(); // gets day of week, e.g. monday
+			                                             if (week === 0) { // same as month, it's formatted in a number so this code below changes it the same way.
+			                                                     week = "Sunday";
+			                                             } // sunday is 0
+			                                             if (week == 1) {
+			                                                     week = "Monday"; // monday is 1
+			                                             }
+			                                             if (week == 2) {
+			                                                     week = "Tuesday";
+			                                             }
+			                                             if (week == 3) {
+			                                                     week = "Wednesday";
+			                                             }
+			                                             if (week == 4) {
+			                                                     week = "Thursday";
+			                                             }
+			                                             if (week == 5) {
+			                                                     week = "Friday";
+			                                             }
+			                                             if (week == 6) {
+			                                                     week = "Saturday"; // saturday is 6
+			                                             }
+			                                             if (mil < 100) { // used so in case milliseconds is e.g. 86, adds a to the beginning. it's impossible for any computer to have a < 10 millisecond, except if it's 120fps or greater.
+			                                                     if (sec < 10) { // adds a zero to front of second if < 10
+			                                                             alert("The date is " + week + " " + mon + " " + day + ", " + yr + ", " + hr + ":" + min + ":0" + sec + ".0" + mil); // what happens if millisecond is < 100 and seconds is < 10, e.g. 86 mil 8 secs
+			                                                     } else {
+			                                                             alert("The date is " + week + " " + mon + " " + day + ", " + yr + ", " + hr + ":" + min + ":" + sec + ".0" + mil); // what happens if secs is  â‰¥  10, but mil is < 100, e.g. 33 mil 17 secs
+			                                                     }
+			                                             }
+			                                             if (mil > 99) {
+			                                                     if (sec < 10) {
+			                                                             alert("The date is " + week + " " + mon + " " + day + ", " + yr + ", " + hr + ":" + min + ":0" + sec + "." + mil); // what happens if mil â‰¥ 100, but secs < 10, e.g. 167 mil 4 secs
+			                                                     } else {
+			                                                             alert("The date is " + week + " " + mon + " " + day + ", " + yr + ", " + hr + ":" + min + ":" + sec + "." + mil); // what happens if mil â‰¥ 100 and secs â‰¥ 10, e.g. 465 mil 24 secs
+			                                                     }
+			                                             }
+			                                     }
+			                                     if (ans == "Calculator") {
+			                                             var nums = prompt("How many numbers? Max 4, min is 2.");
+			                                             if (nums == 2) {
+			                                                     var oper1 = prompt("What operation should I use? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).");
+			                                                     var a = prompt("What should the first number be?");
+			                                                     var b = prompt("What should the second number be?");
+			                                                     if (oper1 == "-") {
+			                                                             var eef1 = function minus(a, b) {
+			                                                                     return a - b;
+			                                                             };
+			                                                             alert(a - b);
+			                                                     }
+			                                                     if (oper1 == "*") {
+			                                                             var eef1 = function multiply(a, b) {
+			                                                                     return a * b;
+			                                                             };
+			                                                             alert(a * b);
+			                                                     }
+			                                                     if (oper1 == "%") {
+			                                                             var eef1 = function modulo(a, b) {
+			                                                                     return a % b;
+			                                                             };
+			                                                             alert(a % b);
+			                                                     }
+			                                                     if (oper1 == "/") {
+			                                                             var eef1 = function divide(a, b) {
+			                                                                     return a / b;
+			                                                             };
+			                                                             alert(a / b);
+			                                                     }
+			                                                     if (oper1 == "âˆš") {
+			                                                             var eef1 = function sqrt(a, b) {
+			                                                                     return Math.sqrt(a, b);
+			                                                             };
+			                                                             alert(Math.sqrt(a, b));
+			                                                     }
+			                                                     if (oper1 == "^") {
+			                                                             var eef1 = function pow(a, b) {
+			                                                                     return Math.pow(a, b);
+			                                                             };
+			                                                             alert(Math.pow(a, b));
+			                                                     }
+			                                             }
+			                                             if (nums == 3) {
+			                                                     var oper1 = prompt("What operation should I use between the first and second numbers? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).");
+			                                                     var oper2 = prompt("What operation should I use between the second and third numbers? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).");
+			                                                     var a = prompt("What should the first number be?");
+			                                                     var b = prompt("What should the second number be?");
+			                                                     var c = prompt("What should the third number be?");
+			                                                     if (oper1 == "-") {
+			                                                             if (oper2 == "-") {
+			                                                                     var eef1 = function minusMinus(a, b, c) {
+			                                                                             return a - b - c;
+			                                                                     };
+			                                                                     alert(a - b - c);
+			                                                             }
+			                                                             if (oper2 == "*") {
+			                                                                     var eef1 = function minusMultiply(a, b, c) {
+			                                                                             return a - b * c;
+			                                                                     };
+			                                                                     alert(a - b * c)
+			                                                             }
+			                                                             if (oper2 == "%") {
+			                                                                     var eef1 = function minusModulo(a, b, c) {
+			                                                                             return a - b % c;
+			                                                                     };
+			                                                                     alert(a - b % c);
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function minusDivide(a, b, c) {
+			                                                                     return a - b / c;
+			                                                             };
+			                                                             alert(a - b / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function minusSqrt(a, b, c) {
+			                                                                     return a - (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a - (Math.pow(b, c)));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function minusPow(a, b, c) {
+			                                                                     return a - (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a - (Math.pow(b, c)));
+			                                                     }
+			                                             }
+			                                             if (oper1 == "*") {
+			                                                     if (oper2 == "-") {
+			                                                             var eef1 = function multiplyMinus(a, b, c) {
+			                                                                     return a * b - c;
+			                                                             };
+			                                                             alert(a * b - c);
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             var eef1 = function multiplyMultiply(a, b, c) {
+			                                                                     return a * b * c;
+			                                                             };
+			                                                             alert(a * b * c);
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             var eef1 = function multiplyModulo(a, b, c) {
+			                                                                     return a * b % c;
+			                                                             };
+			                                                             alert(a * b % c);
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function multiplyDivide(a, b, c) {
+			                                                                     return a * b / c;
+			                                                             };
+			                                                             alert(a * b / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function multiplySqrt(a, b, c) {
+			                                                                     return a * (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a * (Math.pow(b, c)));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function multiplyPow(a, b, c) {
+			                                                                     return a * (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a * (Math.pow(b, c)));
+			                                                     }
+			                                             }
+			                                             if (oper1 == "%") {
+			                                                     if (oper2 == "-") {
+			                                                             var eef1 = function moduloMinus(a, b, c) {
+			                                                                     return a % b - c;
+			                                                             };
+			                                                             alert(a % b - c);
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             var eef1 = function moduloMultiply(a, b, c) {
+			                                                                     return a % b * c;
+			                                                             };
+			                                                             alert(a % b * c);
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             var eef1 = function moduloModulo(a, b, c) {
+			                                                                     return a % b % c;;
+			                                                             };
+			                                                             alert(a % b % c);;
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function moduloDivide(a, b, c) {
+			                                                                     return a % b / c;
+			                                                             };
+			                                                             alert(a % b / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function moduloSqrt(a, b, c) {
+			                                                                     return a % (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a % (Math.pow(b, c)));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function moduloPow(a, b, c) {
+			                                                                     return a % (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a % (Math.pow(b, c)));
+			                                                     }
+			                                             }
+			                                             if (oper1 == "/") {
+			                                                     if (oper2 == "-") {
+			                                                             var eef1 = function divideMinus(a, b, c) {
+			                                                                     return a / b - c;
+			                                                             };
+			                                                             alert(a / b - c);
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             var eef1 = function divideMultiply(a, b, c) {
+			                                                                     return a / b * c;
+			                                                             };
+			                                                             alert(a / b * c);
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             var eef1 = function divideModulo(a, b, c) {
+			                                                                     return a / b % c;
+			                                                             };
+			                                                             alert(a / b % c);
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function divideDivide(a, b, c) {
+			                                                                     return a / b / c;
+			                                                             };
+			                                                             alert(a / b / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function divideSqrt(a, b, c) {
+			                                                                     return a / (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a / (Math.pow(b, c)));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function dividePow(a, b, c) {
+			                                                                     return a / (Math.pow(b, c));
+			                                                             };
+			                                                             alert(a / (Math.pow(b, c)));
+			                                                     }
+			                                             }
+			                                             if (oper1 == "^") {
+			                                                     if (oper2 == "-") {
+			                                                             var eef1 = function powMinus(a, b, c) {
+			                                                                     return Math.pow(a, b) - c;
+			                                                             };
+			                                                             alert(Math.pow(a, b) - c);
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             var eef1 = function powMultiply(a, b, c) {
+			                                                                     return Math.pow(a, b) * c;
+			                                                             };
+			                                                             alert(Math.pow(a, b) * c);
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             var eef1 = function powModulo(a, b, c) {
+			                                                                     return Math.pow(a, b) % c;
+			                                                             };
+			                                                             alert(Math.pow(a, b) % c);
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function powDivide(a, b, c) {
+			                                                                     return Math.pow(a, b) / c;
+			                                                             };
+			                                                             alert(Math.pow(a, b) / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function powSqrt(a, b, c) {
+			                                                                     return Math.pow(a, (Math.pow(b, c)));
+			                                                             };
+			                                                             alert(Math.pow(a, (Math.pow(b, c))));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function powPow(a, b, c) {
+			                                                                     return Math.pow(a, (Math.pow(b, c)));
+			                                                             };
+			                                                             alert(Math.pow(a, (Math.pow(b, c))));
+			                                                     }
+			                                             }
+			                                             if (oper1 == "âˆš") {
+			                                                     if (oper2 == "-") {
+			                                                             var eef1 = function sqrtMinus(a, b, c) {
+			                                                                     return Math.sqrt(a, b) - c;
+			                                                             };
+			                                                             alert(Math.sqrt(a, b) - c);
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             var eef1 = function sqrtMultiply(a, b, c) {
+			                                                                     return Math.sqrt(a, b) * c;
+			                                                             };
+			                                                             alert(Math.sqrt(a, b) * c);
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             var eef1 = function sqrtModulo(a, b, c) {
+			                                                                     return Math.sqrt(a, b) % c;
+			                                                             };
+			                                                             alert(Math.sqrt(a, b) % c);
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             var eef1 = function sqrtDivide(a, b, c) {
+			                                                                     return Math.sqrt(a, b) / c;
+			                                                             };
+			                                                             alert(Math.sqrt(a, b) / c);
+			                                                     }
+			                                                     if (oper2 == "âˆš") {
+			                                                             var eef1 = function sqrtSqrt(a, b, c) {
+			                                                                     return Math.sqrt(a, (Math.pow(b, c)));
+			                                                             };
+			                                                             alert(Math.sqrt(a, (Math.pow(b, c))));
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             var eef1 = function dividePow(a, b, c) {
+			                                                                     return Math.sqrt(a, (Math.pow(b, c)));
+			                                                             };
+			                                                             alert(Math.sqrt(a, (Math.pow(b, c))));
+			                                                     }
+			                                             }
+			                                     }
+			                                     if (nums == 4) {
+			                                             var a = prompt("What should the first number be?")
+			                                             var b = prompt("What should the second number be?")
+			                                             var c = prompt("What should the third number be?")
+			                                             var d = prompt("What should the fourth number be?")
+			                                             var oper1 = prompt("What should the operator between the first and second numbers be? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).")
+			                                             var oper2 = prompt("What should the operator between the second and third numbers be? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).")
+			                                             var oper3 = prompt("What should the operator between the third and fourth numbers be? Options: - (minus), * (multiply), % (modulo), / (divide),  âˆš (square root), ^ (exponent).")
+			                                             if (oper1 == "-") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function minusMinusMINUS(a, b, c, d) {
+			                                                                             return a - b - c - d;
+			                                                                     };
+			                                                                     alert(a - b - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function minusMinusMULTIPLY(a, b, c, d) {
+			                                                                             return a - b - c * d;
+			                                                                     };
+			                                                                     alert(a - b - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function minusMinusMODULO(a, b, c, d) {
+			                                                                             return a - b - c % d;
+			                                                                     };
+			                                                                     alert(a - b - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function minusMinusDIVIDE(a, b, c, d) {
+			                                                                             return a - b - c / d;
+			                                                                     };
+			                                                                     alert(a - b - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function minusMinusSQRT(a, b, c, d) {
+			                                                                             return a - b - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a - b - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function minusMinusPOW(a, b, c, d) {
+			                                                                             return a - b - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a - b - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function minusMultiplyMINUS(a, b, c, d) {
+			                                                                             return a - b * c - d;
+			                                                                     };
+			                                                                     alert(a - b * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function minusMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return a - b * c * d;
+			                                                                     };
+			                                                                     alert(a - b * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function minusMultiplyMODULO(a, b, c, d) {
+			                                                                             return a - b * c % d;
+			                                                                     };
+			                                                                     alert(a - b * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function minusMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return a - b * c / d;
+			                                                                     };
+			                                                                     alert(a - b * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function minusMultiplySQRT(a, b, c, d) {
+			                                                                             return a - b * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a - b * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function minusMultiplyPOW(a, b, c, d) {
+			                                                                             return a - b * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a - b * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function minusModuloMINUS(a, b, c, d) {
+			                                                                             return a - b % c - d;
+			                                                                     };
+			                                                                     alert(a - b % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function minusModuloMULTIPLY(a, b, c, d) {
+			                                                                             return a - b % c * d;
+			                                                                     };
+			                                                                     alert(a - b % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function minusModuloMODULO(a, b, c, d) {
+			                                                                             return a - b % c % d;
+			                                                                     };
+			                                                                     alert(a - b % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function minusModuloDIVIDE(a, b, c, d) {
+			                                                                             return a - b % c / d;
+			                                                                     };
+			                                                                     alert(a - b % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function minusModuloSQRT(a, b, c, d) {
+			                                                                             return a - b % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a - b % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function minusMinusPOW(a, b, c, d) {
+			                                                                             return a - b % Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a - b % Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function minusDivideMINUS(a, b, c, d) {
+			                                                                             return a - b / c - d;
+			                                                                     };
+			                                                                     alert(a - b / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function minusDivideMULTIPLY(a, b, c, d) {
+			                                                                             return a - b / c * d;
+			                                                                     };
+			                                                                     alert(a - b / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function minusDivideMODULO(a, b, c, d) {
+			                                                                             return a - b / c % d;
+			                                                                     };
+			                                                                     alert(a - b / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function minusDivideDIVIDE(a, b, c, d) {
+			                                                                             return a - b / c / d;
+			                                                                     };
+			                                                                     alert(a - b / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function minusDivideSQRT(a, b, c, d) {
+			                                                                             return a - b / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a - b / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function minusDividePOW(a, b, c, d) {
+			                                                                             return a - b / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a - b / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function minusPowMINUS(a, b, c, d) {
+			                                                                             return a - Math.pow(b, (c - d));
+			                                                                     };
+			                                                                     alert(a - Math.pow(b, (c - d)));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function minusPowMULTIPLY(a, b, c, d) {
+			                                                                             return a - Math.pow(b, (c * d));
+			                                                                     };
+			                                                                     alert(a - Math.pow(b, (c * d)));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function minusPowMODULO(a, b, c, d) {
+			                                                                             return a - Math.pow(b, (c % d));
+			                                                                     };
+			                                                                     alert(a - Math.pow(b, (c % d)));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function minusPowDIVIDE(a, b, c, d) {
+			                                                                             return a - Math.pow(b, (c / d));
+			                                                                     };
+			                                                                     alert(a - Math.pow(b, (c / d)));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function minusPowSQRT(a, b, c, d) {
+			                                                                             return a - Math.pow(b, (Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(a - Math.pow(b, (Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function minusPowPOW(a, b, c, d) {
+			                                                                             return a - Math.sqrt(b, (Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(a - Math.sqrt(b, (Math.pow(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                             if (oper1 == "*") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function multiplyMinusMINUS(a, b, c, d) {
+			                                                                             return a * b - c - d;
+			                                                                     };
+			                                                                     alert(a * b - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function multiplyMinusMULTIPLY(a, b, c, d) {
+			                                                                             return a * b - c * d;
+			                                                                     };
+			                                                                     alert(a * b - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function MultiplyMinusMODULO(a, b, c, d) {
+			                                                                             return a * b - c % d;
+			                                                                     };
+			                                                                     alert(a * b - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function multiplyMinusDIVIDE(a, b, c, d) {
+			                                                                             return a * b - c / d;
+			                                                                     };
+			                                                                     alert(a * b - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function multiplyMinusSQRT(a, b, c, d) {
+			                                                                             return a * b - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a * b - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function multiplyMinusPOW(a, b, c, d) {
+			                                                                             return a * b - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a * b - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function MultiplyMultiplyMINUS(a, b, c, d) {
+			                                                                             return a * b * c - d;
+			                                                                     };
+			                                                                     alert(a * b * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function multiplyMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return a * b * c * d;
+			                                                                     };
+			                                                                     alert(a * b * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function multiplyMultiplyMODULO(a, b, c, d) {
+			                                                                             return a * b * c % d;
+			                                                                     };
+			                                                                     alert(a * b * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function multiplyMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return a * b * c / d;
+			                                                                     };
+			                                                                     alert(a * b * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function multiplyMultiplySQRT(a, b, c, d) {
+			                                                                             return a * b * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a * b * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function multiplyMultiplyPOW(a, b, c, d) {
+			                                                                             return a * b * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a * b * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function multiplyModuloMINUS(a, b, c, d) {
+			                                                                             return a * b % c - d;
+			                                                                     };
+			                                                                     alert(a * b % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function multiplyModuloMULTIPLY(a, b, c, d) {
+			                                                                             return a * b % c * d;
+			                                                                     };
+			                                                                     alert(a * b % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function multiplyModuloMODULO(a, b, c, d) {
+			                                                                             return a * b % c % d;
+			                                                                     };
+			                                                                     alert(a * b % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function multiplyModuloDIVIDE(a, b, c, d) {
+			                                                                             return a * b % c / d;
+			                                                                     };
+			                                                                     alert(a * b % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function multiplyModuloSQRT(a, b, c, d) {
+			                                                                             return a * b % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a * b % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function multiplyMinusPOW(a, b, c, d) {
+			                                                                             return a * b % Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a * b % Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function multiplyDivideMINUS(a, b, c, d) {
+			                                                                             return a * b / c - d;
+			                                                                     };
+			                                                                     alert(a * b / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function multiplyDivideMULTIPLY(a, b, c, d) {
+			                                                                             return a * b / c * d;
+			                                                                     };
+			                                                                     alert(a * b / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function multiplyDivideMODULO(a, b, c, d) {
+			                                                                             return a * b / c % d;
+			                                                                     };
+			                                                                     alert(a * b / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function multiplyDivideDIVIDE(a, b, c, d) {
+			                                                                             return a * b / c / d;
+			                                                                     };
+			                                                                     alert(a * b / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function multiplyDivideSQRT(a, b, c, d) {
+			                                                                             return a * b / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a * b / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function multiplyDividePOW(a, b, c, d) {
+			                                                                             return a * b / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a * b / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function multiplyPowMINUS(a, b, c, d) {
+			                                                                             return a * Math.pow(b, (c - d));
+			                                                                     };
+			                                                                     alert(a * Math.pow(b, (c - d)));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function multiplyPowMULTIPLY(a, b, c, d) {
+			                                                                             return a * Math.pow(b, (c * d));
+			                                                                     };
+			                                                                     alert(a * Math.pow(b, (c * d)));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function multiplyPowMODULO(a, b, c, d) {
+			                                                                             return a * Math.pow(b, (c % d));
+			                                                                     };
+			                                                                     alert(a * Math.pow(b, (c % d)));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function multiplyPowDIVIDE(a, b, c, d) {
+			                                                                             return a * Math.pow(b, (c / d));
+			                                                                     };
+			                                                                     alert(a * Math.pow(b, (c / d)));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function multiplyPowSQRT(a, b, c, d) {
+			                                                                             return a * Math.pow(b, (Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(a * Math.pow(b, (Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function multiplyPowPOW(a, b, c, d) {
+			                                                                             return a * Math.sqrt(b, (Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(a * Math.sqrt(b, (Math.pow(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                             if (oper1 == "%") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function moduloMinusMINUS(a, b, c, d) {
+			                                                                             return a % b - c - d;
+			                                                                     };
+			                                                                     alert(a % b - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function moduloMinusMULTIPLY(a, b, c, d) {
+			                                                                             return a % b - c * d;
+			                                                                     };
+			                                                                     alert(a % b - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function MultiplyMinusMODULO(a, b, c, d) {
+			                                                                             return a % b - c % d;
+			                                                                     };
+			                                                                     alert(a % b - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function moduloMinusDIVIDE(a, b, c, d) {
+			                                                                             return a % b - c / d;
+			                                                                     };
+			                                                                     alert(a % b - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function moduloMinusSQRT(a, b, c, d) {
+			                                                                             return a % b - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a % b - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function moduloMinusPOW(a, b, c, d) {
+			                                                                             return a % b - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a % b - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function MultiplyMultiplyMINUS(a, b, c, d) {
+			                                                                             return a % b * c - d;
+			                                                                     };
+			                                                                     alert(a % b * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function moduloMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return a % b * c * d;
+			                                                                     };
+			                                                                     alert(a % b * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function moduloMultiplyMODULO(a, b, c, d) {
+			                                                                             return a % b * c % d;
+			                                                                     };
+			                                                                     alert(a % b * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function moduloMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return a % b * c / d;
+			                                                                     };
+			                                                                     alert(a % b * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function moduloMultiplySQRT(a, b, c, d) {
+			                                                                             return a % b * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a % b * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function moduloMultiplyPOW(a, b, c, d) {
+			                                                                             return a % b * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a % b * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function moduloModuloMINUS(a, b, c, d) {
+			                                                                             return a % b % c - d;
+			                                                                     };
+			                                                                     alert(a % b % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function moduloModuloMULTIPLY(a, b, c, d) {
+			                                                                             return a % b % c * d;
+			                                                                     };
+			                                                                     alert(a % b % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function moduloModuloMODULO(a, b, c, d) {
+			                                                                             return a % b % c % d;
+			                                                                     };
+			                                                                     alert(a % b % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function moduloModuloDIVIDE(a, b, c, d) {
+			                                                                             return a % b % c / d;
+			                                                                     };
+			                                                                     alert(a % b % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function moduloModuloSQRT(a, b, c, d) {
+			                                                                             return a % b % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a % b % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function moduloMinusPOW(a, b, c, d) {
+			                                                                             return a % b % Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a % b % Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function moduloDivideMINUS(a, b, c, d) {
+			                                                                             return a % b / c - d;
+			                                                                     };
+			                                                                     alert(a % b / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function moduloDivideMULTIPLY(a, b, c, d) {
+			                                                                             return a % b / c * d;
+			                                                                     };
+			                                                                     alert(a % b / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function moduloDivideMODULO(a, b, c, d) {
+			                                                                             return a % b / c % d;
+			                                                                     };
+			                                                                     alert(a % b / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function moduloDivideDIVIDE(a, b, c, d) {
+			                                                                             return a % b / c / d;
+			                                                                     };
+			                                                                     alert(a % b / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function moduloDivideSQRT(a, b, c, d) {
+			                                                                             return a % b / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a % b / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function moduloDividePOW(a, b, c, d) {
+			                                                                             return a % b / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a % b / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function moduloPowMINUS(a, b, c, d) {
+			                                                                             return a % Math.pow(b, (c - d));
+			                                                                     };
+			                                                                     alert(a % Math.pow(b, (c - d)));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function moduloPowMULTIPLY(a, b, c, d) {
+			                                                                             return a % Math.pow(b, (c * d));
+			                                                                     };
+			                                                                     alert(a % Math.pow(b, (c * d)));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function moduloPowMODULO(a, b, c, d) {
+			                                                                             return a % Math.pow(b, (c % d));
+			                                                                     };
+			                                                                     alert(a % Math.pow(b, (c % d)));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function moduloPowDIVIDE(a, b, c, d) {
+			                                                                             return a % Math.pow(b, (c / d));
+			                                                                     };
+			                                                                     alert(a % Math.pow(b, (c / d)));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function moduloPowSQRT(a, b, c, d) {
+			                                                                             return a % Math.pow(b, (Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(a % Math.pow(b, (Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function moduloPowPOW(a, b, c, d) {
+			                                                                             return a % Math.sqrt(b, (Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(a % Math.sqrt(b, (Math.pow(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                             if (oper1 == "/") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function divideMinusMINUS(a, b, c, d) {
+			                                                                             return a / b - c - d;
+			                                                                     };
+			                                                                     alert(a / b - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function divideMinusMULTIPLY(a, b, c, d) {
+			                                                                             return a / b - c * d;
+			                                                                     };
+			                                                                     alert(a / b - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function MultiplyMinusMODULO(a, b, c, d) {
+			                                                                             return a / b - c % d;
+			                                                                     };
+			                                                                     alert(a / b - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function divideMinusDIVIDE(a, b, c, d) {
+			                                                                             return a / b - c / d;
+			                                                                     };
+			                                                                     alert(a / b - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function divideMinusSQRT(a, b, c, d) {
+			                                                                             return a / b - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a / b - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function divideMinusPOW(a, b, c, d) {
+			                                                                             return a / b - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a / b - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function MultiplyMultiplyMINUS(a, b, c, d) {
+			                                                                             return a / b * c - d;
+			                                                                     };
+			                                                                     alert(a / b * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function divideMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return a / b * c * d;
+			                                                                     };
+			                                                                     alert(a / b * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function divideMultiplyMODULO(a, b, c, d) {
+			                                                                             return a / b * c % d;
+			                                                                     };
+			                                                                     alert(a / b * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function divideMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return a / b * c / d;
+			                                                                     };
+			                                                                     alert(a / b * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function divideMultiplySQRT(a, b, c, d) {
+			                                                                             return a / b * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a / b * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function divideMultiplyPOW(a, b, c, d) {
+			                                                                             return a / b * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a / b * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function divideModuloMINUS(a, b, c, d) {
+			                                                                             return a / b % c - d;
+			                                                                     };
+			                                                                     alert(a / b % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function divideModuloMULTIPLY(a, b, c, d) {
+			                                                                             return a / b % c * d;
+			                                                                     };
+			                                                                     alert(a / b % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function divideModuloMODULO(a, b, c, d) {
+			                                                                             return a / b % c % d;
+			                                                                     };
+			                                                                     alert(a / b % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function divideModuloDIVIDE(a, b, c, d) {
+			                                                                             return a / b % c / d;
+			                                                                     };
+			                                                                     alert(a / b % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function divideModuloSQRT(a, b, c, d) {
+			                                                                             return a / b % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a / b % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function divideMinusPOW(a, b, c, d) {
+			                                                                             return a / b % Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a / b % Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function divideDivideMINUS(a, b, c, d) {
+			                                                                             return a / b / c - d;
+			                                                                     };
+			                                                                     alert(a / b / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function divideDivideMULTIPLY(a, b, c, d) {
+			                                                                             return a / b / c * d;
+			                                                                     };
+			                                                                     alert(a / b / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function divideDivideMODULO(a, b, c, d) {
+			                                                                             return a / b / c % d;
+			                                                                     };
+			                                                                     alert(a / b / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function divideDivideDIVIDE(a, b, c, d) {
+			                                                                             return a / b / c / d;
+			                                                                     };
+			                                                                     alert(a / b / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function divideDivideSQRT(a, b, c, d) {
+			                                                                             return a / b / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(a / b / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function divideDividePOW(a, b, c, d) {
+			                                                                             return a / b / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(a / b / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function dividePowMINUS(a, b, c, d) {
+			                                                                             return a / Math.pow(b, (c - d));
+			                                                                     };
+			                                                                     alert(a / Math.pow(b, (c - d)));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function dividePowMULTIPLY(a, b, c, d) {
+			                                                                             return a / Math.pow(b, (c * d));
+			                                                                     };
+			                                                                     alert(a / Math.pow(b, (c * d)));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function dividePowMODULO(a, b, c, d) {
+			                                                                             return a / Math.pow(b, (c % d));
+			                                                                     };
+			                                                                     alert(a / Math.pow(b, (c % d)));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function dividePowDIVIDE(a, b, c, d) {
+			                                                                             return a / Math.pow(b, (c / d));
+			                                                                     };
+			                                                                     alert(a / Math.pow(b, (c / d)));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function dividePowSQRT(a, b, c, d) {
+			                                                                             return a / Math.pow(b, (Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(a / Math.pow(b, (Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function dividePowPOW(a, b, c, d) {
+			                                                                             return a / Math.sqrt(b, (Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(a / Math.sqrt(b, (Math.pow(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                             if (oper1 == "âˆš") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function sqrtMinusMINUS(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - c - d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function sqrtMinusMULTIPLY(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - c * d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function sqrtMinusMODULO(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - c % d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function sqrtMinusDIVIDE(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - c / d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function sqrtMinusSQRT(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function sqrtMinusPOW(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function MultiplyMultiplyMINUS(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * c - d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function sqrtMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * c * d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function sqrtMultiplyMODULO(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * c % d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function sqrtMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * c / d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function sqrtMultiplySQRT(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function sqrtMultiplyPOW(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function sqrtModuloMINUS(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) % c - d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function sqrtModuloMULTIPLY(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) % c * d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function sqrtModuloMODULO(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) % c % d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function sqrtModuloDIVIDE(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) % c / d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function sqrtModuloSQRT(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function sqrtMinusPOW(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function sqrtDivideMINUS(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / c - d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function sqrtDivideMULTIPLY(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / c * d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function sqrtDivideMODULO(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / c % d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function sqrtDivideDIVIDE(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / c / d;
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function sqrtDivideSQRT(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function sqrtDividePOW(a, b, c, d) {
+			                                                                             return Math.sqrt(a, b) / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, b) / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function sqrtPowMINUS(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, (c - d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function sqrtPowMULTIPLY(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, (c * d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, (c * d))));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function sqrtPowMODULO(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, (c % d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function sqrtPowDIVIDE(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, (c - d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function sqrtPowSQRT(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function sqrtPowPOW(a, b, c, d) {
+			                                                                             return Math.sqrt(a, Math.pow(b, Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(Math.sqrt(a, Math.pow(b, Math.sqrt(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                             if (oper1 == "^") {
+			                                                     if (oper2 == "-") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function powMinusMINUS(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - c - d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function powMinusMULTIPLY(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - c * d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function powMinusMODULO(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - c % d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function powMinusDIVIDE(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - c / d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function powMinusSQRT(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function powMinusPOW(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "*") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function MultiplyMultiplyMINUS(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * c - d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function powMultiplyMULTIPLY(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * c * d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function powMultiplyMODULO(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * c % d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function powMultiplyDIVIDE(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * c / d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function powMultiplySQRT(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function powMultiplyPOW(a, b, c, d) {
+			                                                                             return Math.pow(a, b) * Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) * Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "%") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function powModuloMINUS(a, b, c, d) {
+			                                                                             return Math.pow(a, b) % c - d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) % c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function powModuloMULTIPLY(a, b, c, d) {
+			                                                                             return Math.pow(a, b) % c * d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) % c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function powModuloMODULO(a, b, c, d) {
+			                                                                             return Math.pow(a, b) % c % d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) % c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function powModuloDIVIDE(a, b, c, d) {
+			                                                                             return Math.pow(a, b) % c / d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) % c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function powModuloSQRT(a, b, c, d) {
+			                                                                             return Math.pow(a, b) % Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) % Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function powMinusPOW(a, b, c, d) {
+			                                                                             return Math.pow(a, b) - Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) - Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "/") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function powDivideMINUS(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / c - d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / c - d);
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function powDivideMULTIPLY(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / c * d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / c * d);
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function powDivideMODULO(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / c % d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / c % d);
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function powDivideDIVIDE(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / c / d;
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / c / d);
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function powDivideSQRT(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / Math.sqrt(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / Math.sqrt(c, d));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function powDividePOW(a, b, c, d) {
+			                                                                             return Math.pow(a, b) / Math.pow(c, d);
+			                                                                     };
+			                                                                     alert(Math.pow(a, b) / Math.pow(c, d));
+			                                                             }
+			                                                     }
+			                                                     if (oper2 == "^") {
+			                                                             if (oper3 == "-") {
+			                                                                     var eef1 = function powPowMINUS(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, (c - d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "*") {
+			                                                                     var eef1 = function powPowMULTIPLY(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, (c * d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, (c * d))));
+			                                                             }
+			                                                             if (oper3 == "%") {
+			                                                                     var eef1 = function powPowMODULO(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, (c % d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "/") {
+			                                                                     var eef1 = function powPowDIVIDE(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, (c - d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, (c - d))));
+			                                                             }
+			                                                             if (oper3 == "âˆš") {
+			                                                                     var eef1 = function powPowSQRT(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, Math.sqrt(c, d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, Math.sqrt(c, d))));
+			                                                             }
+			                                                             if (oper3 == "^") {
+			                                                                     var eef1 = function powPowPOW(a, b, c, d) {
+			                                                                             return Math.pow(a, Math.pow(b, Math.pow(c, d)));
+			                                                                     };
+			                                                                     alert(Math.pow(a, Math.pow(b, Math.sqrt(c, d))));
+			                                                             }
+			                                                     }
+			                                             }
+			                                     }
+			                             }
+			                     }
+			</script>
+			<style>
+			                     canvas {
+			                             border: 1px solid #d3d3d3;
+			                             background-color: #f1f1f1;
+			                     }
+			</style>
+			<script>
+			                     var gameControl;
+			                     var obstacles = [];
+			                     var myScore;
+                                 var rngVarSet;
+
+			                   function startGame() {
+			                             gameControl = new component(20, 20, "red", 10, 120);
+			                             gameControl.gravity = 0.05;
+			                             corner1 = new component(5, 5, "green", 10, 120);
+			                             corner1.gravity = 0.05;
+			                             corner2 = new component(5, 5, "blue", 30, 120);
+			                             corner2.gravity = 0.05;
+			                             corner3 = new component(5, 5, "yellow", 30, 131);
+			                             corner3.gravity = 0.05;
+			                             corner4 = new component(5, 5, "purple", 10, 131);
+			                             corner4.gravity = 0.05;
+			                             myScore = new component("34px", "Consolas", "black", 280, 40, "text");
+			                             gameArea.start();
+			                     }
+			                     var gameArea = {
+			                             canvas: document.createElement("canvas"),
+			                             start: function() {
+			                                     this.canvas.width = 750;
+			                                     this.canvas.height = 270;
+			                                     this.context = this.canvas.getContext("2d");
+			                                     document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+			                                     this.frameNo = 0;
+			                                     this.interval = setInterval(updateGameArea, 9.87);
+			                             },
+			                             clear: function() {
+			                                     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			                             },
+                                             stop: function() {
+       											 clearInterval(this.interval);
+  											  }
+			                     };
+
+
+
+
+			                                         function component(width, height, color, x, y, type) {
+			                             this.type = type;
+			                             this.score = 0;
+			                             this.width = width;
+			                             this.height = height;
+			                             this.speedX = 0;
+			                             this.speedY = 0;
+			                             this.x = x;
+			                             this.y = y;
+			                             this.gravity = 200;
+			                             this.gravitySpeed = 0;
+			                             this.update = function() {
+			                                     ctx = gameArea.context;
+			                                     if (this.type == "text") {
+			                                             ctx.font = this.width + " " + this.height;
+			                                             ctx.fillStyle = color;
+			                                             ctx.fillText(this.text, this.x, this.y);
+			                                     } else {
+			                                             ctx.fillStyle = color;
+			                                             ctx.fillRect(this.x, this.y, this.width, this.height);
+			                                     }
+			                             };
+			                             this.newPos = function() {
+			                                     this.gravitySpeed += this.gravity;
+			                                     this.x += this.speedX;
+			                                     this.y += this.speedY + this.gravitySpeed;
+			                                     this.hitBottom();
+			                             };
+			                             this.hitBottom = function() {
+			                                     var rockbottom = gameArea.canvas.height - this.height;
+			                                     if (this.y > rockbottom) {
+			                                             this.y = rockbottom;
+			                                             this.gravitySpeed = 0;
+			                                             corner1.gravity = 0;
+			                                             corner1.y = (gameControl.y - 3);
+			                                             corner2.gravity = 0;
+			                                             corner2.y = (gameControl.y - 3);
+			                                             corner2.x = (gameControl.x + 15);
+			                                             corner3.gravity = 0;
+			                                             corner3.y = (gameControl.y + 11);
+			                                             corner3.x = (gameControl.x + 15);
+			                                             corner4.gravity = 0;
+			                                             corner4.y = (gameControl.y + 11);
+			                                     }
+			                             };
+    this.crashWith = function(otherobj) {
+        var myleft = this.x;
+        var myright = this.x + (this.width);
+        var mytop = this.y;
+        var mybottom = this.y + (this.height);
+        var otherleft = otherobj.x;
+        var otherright = otherobj.x + (otherobj.width);
+        var othertop = otherobj.y;
+        var otherbottom = otherobj.y + (otherobj.height);
+        var crash = true;
+        if ((mybottom < othertop) ||
+               (mytop > otherbottom) ||
+               (myright < otherleft) ||
+               (myleft > otherright)) {
+           crash = false;
+        }
+        return crash;
+    };
+			                     }
+
+			                   function updateGameArea() {
+			                             var x, height, gap, minHeight, maxHeight, minGap, maxGap;
+			                                 for (i = 0; i < obstacles.length; i += 1) {
+    											     if (gameControl.crashWith(obstacles[i])) {
+           											 gameArea.stop();
+           											 return;
+      											  } 
+    									   }
+                                         if (gameControl.y < 1) {
+			                                     gameControl.y = 0;
+			                                     corner1.y = (gameControl.y - 4);
+			                                     corner2.y = (gameControl.y - 3);
+			                                     corner3.y = (gameControl.y + 11);
+			                                     corner4.y = (gameControl.y + 11);
+			                                     this.gravity = 0.05;
+			                             }
+			                             corner1.y = (gameControl.y - 4);
+			                             corner2.y = (gameControl.y - 3);
+			                             corner3.y = (gameControl.y + 11);
+			                             corner4.y = (gameControl.y + 11);
+			                             gameArea.frameNo += 0.5;
+                                         gameArea.clear();
+			                             if (gameArea.frameNo == 0.5 || everyinterval(120)) {
+			                                     x = gameArea.canvas.width;
+			                                     minHeight = 40;
+			                                     maxHeight = 200;
+                                                 if (rngVarSet != "yes") {
+                                                 rngVarSet = "no";
+                                                 }
+                                                 if (rngVarSet == "no" || rngVarSet === undefined) {
+                                                 			rngVar = Math.floor((Math.random() * 10) + 1);
+                                                 rngVarSet = "yes";
+                                                 }
+                                                         if (rngVar < 5) {
+			                                             minGap = 70;
+			                                             maxGap = 136;
+                                                         document.getElementById("mode").innerHTML = "Easy Mode";
+			                                     }
+			                                     if (rngVar > 4 && rngVar != 10) {
+			                                             minGap = 45;
+			                                             maxGap = 87;
+                                                         document.getElementById("mode").innerHTML = "Hard Mode";
+			                                     }
+			                                     if (rngVar == 10) {
+			                                             minGap = 27;
+			                                             maxGap = 28;
+                                                         document.getElementById("mode").innerHTML = "Ultra-Expert Mode";
+			                                     } 
+			                                     height = Math.floor(Math.random() * (maxHeight - minHeight + 1) + minHeight);
+			                                     gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
+        obstacles.push(new component(10, height, "green", x, 0));
+        obstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+			                             }
+                                             for (i = 0; i < obstacles.length; i += 1) {
+        obstacles[i].x += -1;
+        obstacles[i].update();
+    }
+			                                     corner1.y = (gameControl.y - 4);
+			                                     corner2.y = (gameControl.y - 3);
+			                                     corner2.x = (gameControl.x + 15);
+			                                     corner3.y = (gameControl.y + 11);
+			                                     corner3.x = (gameControl.x + 15);
+			                                     corner4.y = (gameControl.y + 11);
+			                             if (gameArea.frameNo > 240) {
+			                                     myScore.text = "SCORE: " + Math.round(gameArea.frameNo / 120 - 2.5);
+			                                     myScore.update();
+			                             } else {
+			                                     myScore.text = "SCORE: 0";
+			                                     myScore.update();
+			                             }
+			                             gameControl.newPos();
+			                             gameControl.update();
+			                             corner1.newPos();
+			                             corner1.update();
+			                             corner2.newPos();
+			                             corner2.update();
+			                             corner3.newPos();
+			                             corner3.update();
+			                             corner4.newPos();
+			                             corner4.update();
+			                             if (gameArea.frameNo > 12240) {
+			                                     myEnd = new component("34px", "Consolas", "black", 270, 147, "text");
+			                                     myEnd.text = "You Win!";
+			                                     myEnd.update();
+			                                     var img = document.getElementById("victoryRoyale");
+			                                     ctx.drawImage(img, 0, 0, 750, 270);
+			                             }
+			                     }
+
+
+
+
+			                                             function everyinterval(n) {
+			                             if ((gameArea.frameNo / n) % 1 === 0) {
+			                                     return true;
+							}
+			                             return false;
+			                     }
+
+
+
+
+			                                             function accelerate(n) {
+			                             gameControl.gravity = n;
+			                     }
+			</script>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
