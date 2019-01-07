@@ -17,3 +17,4 @@ To submit issues:
 
 # How to Run
 I have HTML, JS, and CSS files. I will also have a .txt file if your computer is bad and can't run html files lol. Either way PLEASE USE THE HTML FILE IT IS WAY BETTER.
+a
