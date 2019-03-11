@@ -1,24 +1,18 @@
-    <style>
-	               body {
+	 body {
 	   margin: 0;
 	   font-family: comic-sans-ms;
 	}
-	@-webkit-keyframes mymove {
-	   50% {
-	       background-color: gray;
-	   }
-	}
+	background {
+		background-color: white;
+}
 	.tab {
+
 	   overflow: hidden;
-	   border: 2px solid #ccc;
-	   background: red;
-	   -webkit-animation: mymove 8s infinite;
+	   border: none;
 	}
 	.tab button {
-	   background: red;
-	   -webkit-animation: mymove 8s infinite;
 	   float: left;
-	   border: none;
+	   border: none; 
 	   outline: none;
 	   cursor: alias;
 	   padding: 14px 16px;
@@ -26,10 +20,10 @@
 	   font-size: 17px;
 	}
 	.tab button:hover {
-	   background-color: #000000;
+	   background-color: #008000;
 	}
 	.tab button.active {
-	   background-color: #ffffff;
+	   background-color: #00FFFF;
 	}
 	.tabcontent {
 	   display: none;
@@ -48,4 +42,3 @@
 	       opacity: 1;
 	   }
 	}
-	</style>

@@ -1,9 +1,9 @@
 ---
 name: Suggestion
-about: 'Suggest an idea '
+about: 'Suggest an idea'
 title: Suggestion
-labels: ''
-assignees: ''
+labels: 'enhancement'
+assignees: 'irishmapping'
 
 ---
 
@@ -18,4 +18,5 @@ Why do you want this to be added?
 **Technical details**
 
 OS: (Check the bug report file for details on what to put here)
+
 Editor: (^)
