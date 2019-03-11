@@ -30,3 +30,12 @@ Don't meme with your commits (memeing the title is okay though, who cares really
 Only commit if you really need to
 Be nice to people who don't like the commit (and be nice in general)
 Must be approved by me unless I gave you complete access to this repos.
+Don't backseat mod (e.g. Doing things a person with write access would do, such as saying that you approve a pull request. If you have contributed before and approve though, ping me and I will approve or decline it.)
+
+# Comment Rules
+Be nice to others (no-brainer, really)
+Don't meme, again.
+Don't post anything like +1, I agree, etc.
+If someone disagrees, don't be all "My request is better than any you'll ever make!"
+Don't be toxic.
+Make fun of windows 8 every time or ban xd
