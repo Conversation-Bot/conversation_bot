@@ -24,3 +24,9 @@ Check the [issues](https://github.com/Conversation-Bot/conversation_bot/issues) 
 
 # How to Run
 I have HTML, JS, and CSS files. I will also have a .txt file if your computer is bad and can't run html files lol. Either way PLEASE USE THE HTML FILE IT IS WAY BETTER. HTML EDITORS DON'T KNOW HOW TO RUN THIS CODE FOR SOME REASON LOL.
+
+# Commits
+Don't meme with your commits (memeing the title is okay though, who cares really?).
+Only commit if you really need to
+Be nice to people who don't like the commit (and be nice in general)
+Must be approved by me unless I gave you complete access to this repos.
