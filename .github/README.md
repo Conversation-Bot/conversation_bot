@@ -20,7 +20,7 @@ To submit issues:
 7. Any extra notes.
 8. Technical details (e.g. what program or website you are using to run the code, OS, [BIOS](https://en.wikipedia.org/wiki/BIOS), etc.)
 
-Check the [issues](https://github.com/Conversation-Bot/conversation_bot/issues) tab to check if it's been reported already.
+Make sure to check the [issues](https://github.com/Conversation-Bot/conversation_bot/issues) tab to check if it's been reported already.
 
 # How to Run
 I have HTML, JS, and CSS files. I will also have a .txt file if your computer is bad and can't run html files lol. Either way PLEASE USE THE HTML FILE IT IS WAY BETTER. HTML EDITORS DON'T KNOW HOW TO RUN THIS CODE FOR SOME REASON LOL.
