@@ -13,7 +13,7 @@ Or, you can contact me if you want to... play a game of Smash Bros or something.
 To submit issues:
 1. Explain the problem in detail.
 2. Explain how to recreate it (include all optional steps too.)
-3. Explain what **you think** should happen.
+3. Explain what you **think** should happen.
 4. Explain what actually happens.
 5. Tell me what you **think** I can do to fix it.
 6. Locate where you **think** the problem is.
@@ -43,8 +43,8 @@ Don't meme, again.
 
 Don't post anything like +1, I agree, etc.
 
-If someone disagrees, don't be all "My request is better than any you'll ever make!"
+If someone disagrees, don't be all "My request is better than any you'll ever make!" and other things like that.
 
 Don't be toxic.
 
-Make fun of windows 8 every time or ban xd
+Make fun of Windows 8 every time or ban xd
