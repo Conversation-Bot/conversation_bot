@@ -31,3 +31,7 @@ Don't post anything like +1, I agree, etc.
 If someone disagrees, don't be all "My request is better than any you'll ever make!"
 Don't be toxic.
 Make fun of windows 8 every time or ban xd
+Bot
+There will be a bot for this that will do things usually automatically, run by a python script "cb.py." It may have some errors (haven't used python in a while) but it is an easy way for me to update the bot while in class. I can schedule any changes I want, anytime I want. Usually, before school, I schedule a few scripts I had written the night before. I may not be able to every day, but incase I know I will be unable to schedule scripts, I will schedule them days in advance. Note that this bot will not be publicly released.
+Side Project
+Side Project "Project HTML-01" is a small side project I am doing to showcase some things with HTML. It won't be much, but I still will probably focus on it more than this since I am basically finished with this. You can view it on GitLab or GitHub.
